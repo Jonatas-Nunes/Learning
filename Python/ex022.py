@@ -1,0 +1,7 @@
+name = str(input('Escreve seu nome completo: '))
+print(name.upper())
+print(name.lower())
+namews = len(name)-name.count(" ")
+print('Seu nome possui {} letras.'.format(namews))
+di = name.split()
+print('Seu primeiro nome possui {} letras.'.format(len(di[0])))

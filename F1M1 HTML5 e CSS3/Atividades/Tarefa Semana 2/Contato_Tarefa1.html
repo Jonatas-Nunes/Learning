@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- 1. Metainformações da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title> <!-- 2. Título da página -->
+    <link rel="stylesheet" href="CSS_Tarefa1.css">
+</head>
+
+<body>
+    <h2><a href="Principal_Tarefa1.html"><i>Principal</i></a> :: <a href="Sobre o Jonatas_Tarefa1.html"> Sobre o
+            Jônatas</a> :: <a href="Projetos_Tarefa1.html">Projetos</a> :: <a href="Contato_Tarefa1.html">Contato</a>
+    </h2> <!-- 3. Barra de navegação superior completa, com linhas superior e inferior -->
+    <hr>
+    <svg xmlns="http://www.w3.org/2000/svg" width="960" height="120">
+        <defs>
+            <linearGradient id="degrade" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="black" stop-opacity=".5" />
+                <stop offset="100%" stop-color="black" stop-opacity="1" />
+            </linearGradient>
+        </defs>
+        <rect width="100%" height="120" fill="url(#degrade)" />
+        <g dominant-baseline="middle" text-anchor="start">
+            <text x="20" y="45%" fill="white" font-size="56" font-family="sans-serif">
+                Jônatas Nunes Pereira Eleutério
+            </text>
+            <text x="20" y="75%" fill="white" font-size="16" font-family="sans-serif">
+                &lt; Designer e Desenvolvedor Web&gt;
+            </text>
+        </g>
+    </svg><!-- 2. Link para a página Quem Sou -->
+    <hr>
+    <h1>Contato</h1> <!-- 4. Título de primeiro nível "Contato" -->
+    <ul> <!-- 5. Abertura de elemento contêiner de lista não-ordenada -->
+        <li>Residente em Vitória/ES</li>
+        <li><a href="mailto:jonatasnpe@hotmail.com" target="_blank">jonatasnpe@hotmail.com</a></li>
+        <!-- 6. Item de lista contendo link para o conto de e-mail -->
+        <li>(28) 98817-1482</li> <!-- 7. Item de lista contendo telefone (27) 99999-9999 -->
+        <li><a href="https://www.linkedin.com/in/jônatas-nunes-pereira-eleutério-65836b185/"
+                target="_blank">LinkedIn</a></li>
+    </ul> <!-- 8. Fechamento de elemento contêiner de lista não-ordenada -->
+    <hr>
+    <h1>Formulário de Contato</h1>
+    <form>
+        <div>
+            <label for="txtNomeCompleto">Nome completo:</label><br>
+            <input type="text" name=NomeCompleto id="txtNomeCompleto" required readonly>
+        </div>
+
+        <p></p>
+
+        <div>
+            <label for="slctSubject">Assunto</label><br>
+            <select name="Assunto" id="SubjectList" required>
+                <option value="slcsubject1">Tenho intersse em fazer um website para minha empresa.</option>
+                <option value="slcsubject2">Proposta em vaga comercial de Web-Dev (Serviço PF)</option>
+                <option value="slcsubject3">Proposta de contrato para serviço PJ</option>
+            </select>
+        </div>
+        <p></p>
+        <div>
+                <label for="txtmessage">Mensagem</label><br>
+                <input type="text" name=Mensagem size="100" maxlength="500" required >
+        </div>
+
+        <p></p>
+
+        <div>
+            <input type="checkbox" name="newsletter" value="News" required> Deseja receber minha newsletter?
+        </div>
+
+        <p></p>
+
+        <div>
+            <label for="lead">Onde me encontrou?</label><br>
+            <input type="radio" name="Youtube" value="Youtube">Youtube<br>
+            <input type="radio" name="Google" value="Google">Google<br>
+            <input type="radio" name="Bing" value="Bing">Bing<br>
+            <input type="radio" name="Outros" value="Outros">Outros<br>
+        </div>
+
+        <p></p>
+        
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+    <hr>
+    <p>Copyright &copy; 2021 :: Todos os direitos reservados</p>
+    <!-- 9. Parágrafo com informações de copyright com linha superior -->
+
+    <p><img class="imagem" src="../Tarefa Semana 1/Tarefa/img/ifes.png" alt="ifes.logo" width="96"></p>
+    <!-- 10. Parágrafo com imagem "ifes.png" que está na pasta img, com 96 de altura -->
+
+</body>
+
+</html>

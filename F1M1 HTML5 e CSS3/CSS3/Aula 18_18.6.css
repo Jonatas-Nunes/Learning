@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    min-height: 60vh;
+}
+
+main article {
+    flex-grow: 1;
+}
+
+main > nav, main > aside {
+    flex: 0 0 20vw;
+    background-color: antiquewhite;
+}
+
+header, footer {
+    background-color: #444;
+    height: 20vh;
+}
+
+header, footer, article, nav, aside {
+    padding: 20px;
+}

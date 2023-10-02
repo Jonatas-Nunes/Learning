@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Atributo autocomplete</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" size="60" maxlength="20" required name="campo2" id="campo2"><br>
+        <input type="text" size="60" maxlength="20" required name="campo1" id="campo1" autocomplete="off"><br>
+
+        <h1>Atributo Datalist</h1>
+        
+        <input type="text" size="60" maxlength="20" required name="campo2" id="campo2 autofocus" list="minhalista"
+            placeholder="Digite aqui o seu nome"><br>
+
+        <datalist id="minhalista">
+            <option value="valor1"></option>
+            <option value="valor2"></option>
+            <option value="valor3"></option>
+        </datalist>
+
+        <h1>Atributo Pattern</h1>
+        <label for="patterntext">Adione a placa de um carro do tipo ABC-1234.</label><br>
+        <input type="text" pattern="[A-Z]{3}-[0-9]{4}" required><br>
+
+        <label for="patterntext1">Adione o número de telefone </label><br>
+        <input type="text" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}">
+
+        <h1>Campos do tipo password</h1>
+        <input type="password" placeholder="Senha"><br>
+
+        <h1>Atributo do tipo Radio</h1>
+        <input type="radio" name="EstadoCivil" value="C">Casado<br>
+        <input type="radio" name="EstadoCivil" value="S">Solteiro<br>
+        <input type="radio" name="EstadoCivil" value="O">Outro<br>
+
+        <h1>Atributo do tipo checkbox</h1>
+        <input type="checkbox" name="noticias" value="C" required> Notícias<br>
+        <input type="checkbox" name="promocoes" value="P" required> Promoções<br>
+        <input type="checkbox" name="alertas" value="A" required> Alertas<br>
+
+        <h1>Atributo do tipo Color</h1>
+        <input type="color"><br>
+
+        <h1>Atributo do tipo date</h1>
+        <input type="date" min="1979-07-01" max="1980-05-20"><br>
+        <input type="datetime-local" min="1979-07-01T00:00:00" max="1980-07-01T00:00:00"><br>
+
+        <h1>Atributo do tipo E-mail</h1>
+        <input type="email"><br>
+
+        <h1>Atributo do tipo FILE</h1>
+        <input type="file">
+
+        <h1>Atributo do tipo Hidden</h1>
+        <input type="hidden" name="id" value="451">
+        <input type="text" name="nomeCompleto">
+
+        <h1>Atributo do tipo Month</h1>
+        <input type="month" name="mesNascimento" min="2020-12" max="2021-05">
+
+        <h1>Atributo do tipo de botões</h1>
+        <input type="submit" value="Enviar">
+
+        <h1>Atributo do tipo Number</h1>
+        <input type="number" name="valor" min="100" max="1000" step="50">
+
+        <h1>Atributo do tipo RANGE</h1>
+        <input type="range" name="valor" min="100" max="1000" step="10">
+
+        <h1>Atributos do tipo SEARCH</h1>
+        <input type="search" name="termo">
+
+        <h1>Atributo do tipoe TEL</h1>
+        <input type="tel" name="telefone" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}">
+
+        <h1>Atributo de Horas</h1>
+        <input type="time" name="horaMarcada" min="00:00:00" max="18:00:00">
+
+        <h1>Atributo de URL</h1>
+        <input type="url" name="enderecoSite">
+
+        <h1>Atributo do tipo WEEK</h1>
+        <input type="week" name="semanaCongresso" min="2021-W18" max="2021-W25">
+
+        <h1>Atributo de botões</h1>
+        <input type="reset" value="Limpar"><br>
+        <input type="buton" value="Enviar" onclick="this.form.submit();">
+    </form>
+</body>
+
+</html>

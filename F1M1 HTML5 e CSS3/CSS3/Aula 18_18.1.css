@@ -1,0 +1,60 @@
+/*padronizar documento -  cross browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    border: dotted 2px black;
+    background-color: antiquewhite;
+    display: flex;
+    /* flex-direction: row; */ 
+    /* flex-wrap: wrap; */
+    flex-flow: row nowrap;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
+}
+
+div {
+    /* height: 120px; */
+    width: 30%;
+    border: dotted 2px black;
+    font-size: 60px;
+    text-align: center;
+    line-height: 120px;
+}
+
+/* forma de ordenar as div dentro de uma flexbox
+
+#div1 { order: 3; }
+#div2 { order: 5; }
+#div3 { order: 2; }
+#div4 { order: 1; }
+#div5 { order: 7; }
+#div6 { order: 4; }
+#div7 { order: 6; } 
+
+*/
+
+/* #div1, #div3, #div7 {
+    height: 150px; 
+} */
+
+/* div {
+    flex-grow: 1;
+} */
+
+#div3 {
+    /* flex-shrink: 0;
+    flex-shrink: 0;
+    flex-basis: 200px; */ 
+    flex: 0 0 200px;
+    align-self: center;
+}
+
+/* #div5 {
+    flex-grow: 0.5
+} */

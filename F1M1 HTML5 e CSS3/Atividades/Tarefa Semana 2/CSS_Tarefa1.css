@@ -1,0 +1,22 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    background-color: lightgrey;
+}
+h1 {
+    color: darkgrey;
+    text-align: center;
+    border: solid 1px black;
+}
+p {
+    color: rgb(41, 41, 41);
+}
+p {
+    text-align: justify;
+    font-size: 16px;
+}
+progress-bar {
+    height: 50px;
+    padding: 5px;
+    background-color: #ccc;
+  }

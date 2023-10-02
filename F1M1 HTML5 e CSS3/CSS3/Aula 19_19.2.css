@@ -1,0 +1,35 @@
+body {
+    background-color: #ffeead;
+    margin: 10px;
+}
+
+.conteiner > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffeead;
+}
+
+.conteiner > div:nth-child(1n) {
+    background-color: #96ceb4;
+}
+
+.conteiner > div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+
+.conteiner > div:nth-child(3n) {
+    background-color: #a4a3e7;
+}
+
+.conteiner > div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+
+.conteiner {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 50px 50px 100px;
+    grid-gap: 10px;
+}

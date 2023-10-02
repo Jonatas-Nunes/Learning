@@ -1,0 +1,10 @@
+body {
+    background-color: hsl(0, 100%, 50%);
+    background-color: rgb(128, 128, 128);
+    background-color: #aa5522;
+    background-color: grey;
+}
+
+p {
+    background-color: rgba(0, 0, 255,  0.5);
+}

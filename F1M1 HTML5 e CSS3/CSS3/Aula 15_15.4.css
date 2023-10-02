@@ -1,0 +1,16 @@
+div {
+    border: solid 5px;
+    font-size: 30px;
+    text-align: center;
+    height: 100px;
+}
+
+/*
+#div1 {
+    display: none;
+}
+*/
+
+#div2 {
+    visibility: hidden;
+}

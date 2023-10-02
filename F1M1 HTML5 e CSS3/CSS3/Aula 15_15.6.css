@@ -1,0 +1,9 @@
+div {
+    border: solid 1px black;
+    margin: 30px;
+    padding: 10px;
+}
+
+#div2 {
+    display: contents;
+}

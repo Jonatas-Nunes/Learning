@@ -1,0 +1,35 @@
+body {
+    background-image: url(bg2.jpg);
+    height: 3000px;
+}
+
+div {
+    display: inline-block;
+}
+
+#div1 {
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+}
+
+#div2 {
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+    position: static;
+    left: 50px;
+    top: 50px
+}
+
+#div3 {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50px;
+    top: 50px
+}

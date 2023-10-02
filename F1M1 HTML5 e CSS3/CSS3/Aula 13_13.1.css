@@ -1,0 +1,78 @@
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap&family=Sofia&display=swap');
+
+body, a {
+    color: gray;
+}
+
+h1 {
+    font-size: 8vw;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    
+    /*
+    FONTES SERIFADAS
+    font-family: serif;
+
+    FONTES NÃO SERIFADAS
+    font-family: sans-serif;
+    */
+
+    /*font-family: monospace;
+    font-family: Courier;
+    font-family: "Monaco", sans-serif;
+    font-family: "Monaco", monospace;
+    font-family "cursive";
+    font-family: "Brush Script MT";
+    font-family: "Lucida Handwriting";
+    font-family: "fantasy";
+    font-family: "Papyrus";
+    font-family: "Coppeplate";
+    font-family: "Tahoma"*/
+    font-family: "Sofia";
+
+    /*font-style: italic;*/
+    /*font-style: oblique;
+    font-style: normal;*/
+
+    /*font-weight: lighter;*/
+
+    /*font-variant: small-caps;*/
+
+    
+}
+
+p {
+    text-align: justify;
+    /*direction: rtl;
+    unicode-bidi: bidi-override;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;*/
+    
+    /*text-decoration: underline wavy;
+    text-decoration: underline dotted;
+    text-decoration: dashed;
+    text-decoration; double;
+    text-decoration; solid*/
+
+    
+    text-transform: capitalize;
+    /*text-transform: lowercase;
+    text-transform: uppercase;
+    text-transform: none;*/
+
+    text-indent: 40px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.5;
+
+    word-spacing: 5px;
+
+    /*white-space: nowrap;
+    white-space: pre-wrap;
+    white-space: pre-line;*/
+    white-space: normal;
+
+
+}

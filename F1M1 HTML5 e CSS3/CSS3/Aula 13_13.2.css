@@ -1,0 +1,56 @@
+ body, a {
+    color: gray;
+}
+
+h1 {
+    text-align: center;
+    font: normal small-caps normal 30px/60px "Sofia";
+}
+
+p {
+    text-align: left;
+    text-decoration: underline wavy;
+    text-transform: capitalize;
+    text-indent: 3rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    word-spacing: 5px;
+    white-space: normal;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: gray
+}
+
+a {
+    border: solid 1px black;
+    padding: 5px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-image:  url("./seta10.png");
+    /*margin: 0;
+    padding: 0;*/
+}
+
+ul li {
+    line-height: 35px;
+    /*display: inline-block;*/
+    
+}
