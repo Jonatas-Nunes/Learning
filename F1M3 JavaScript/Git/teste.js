@@ -1,51 +1,10 @@
-const prompt = require('prompt-sync')();
+var n = 15;
+var divisores = 0
 
-var nome = prompt("Digite seu nome: ");
-var salario_bruto = parseFloat(prompt("Digite seu salário bruto: "));
-var dependentes = parseInt(prompt("Digite a quantidade de dependentes: "));
-var renda_familiar = 0
-
-if (dependentes > 0) {
-
-    for (var dep = 1; dep <= dependentes; dep++) {
-        var nome = prompt("Digite o nome do dependente: ");
-        var ganho_mensal = prompt("Digite o ganho mensal do seu dependente: ");
-        var renda_familiar = salario_bruto + ganho_mensal;
-    }
-
-    var renda_familiar_pcapta = renda_familiar / dependentes;
-
-    if (renda_familiar_pcapta >= 500) {
-        if (renda_familiar <= 1903.98) {
-            var salario_liquido = renda_familiar * 0.95;
-            console.log("Seu salário líquido é: R$ ", salario_liquido);
-            console.log("O desconto aplicado foi de: R$ ", renda_familiar * 0.05);
-        } else if (renda_familiar > 1903.98 && renda_familiar <= 2826.65) {
-            var salario_liquido = renda_familiar * 0.925;
-            console.log("Seu salário líquido é: R$ ", salario_liquido);
-            console.log("O desconto aplicado foi de: R$ ", renda_familiar * 0.075)
-        } else {
-            var salario_liquido = renda_familiar * 0.85;
-            console.log("Seu salário líquido é: R$ ", salario_liquido);
-            console.log("O seu desconto aplicado foi de:  R$ ", renda_familiar * 0.15)
-        }
-    } else {
-        console.log("Você está inseto de imposto de renda.");
-    }
-
-} else if (dependentes == 0) {
-
-    if (salario_bruto <= 1903.98) {
-        var salario_liquido = salario_bruto * 0.95;
-        console.log("Seu salário líquido é: R$ ", salario_liquido);
-        console.log("O desconto aplicado foi de: R$ ", salario_bruto * 0.05);
-    } else if (salario_bruto > 1903.98 && salario_bruto <= 2826.65) {
-        var salario_liquido = salario_bruto * 0.925;
-        console.log("Seu salário líquido é: R$ ", salario_liquido);
-        console.log("O desconto aplicado foi de: R$ ", salario_bruto * 0.075)
-    } else {
-        var salario_liquido = salario_bruto * 0.85;
-        console.log("Seu salário líquido é: R$ ", salario_liquido);
-        console.log("O seu desconto aplicado foi de:  R$ ", salario_bruto * 0.15)
+for (let j = 1; j <= n; j++) {
+    if (n % j == 0) {
+        console.log(j);
+        divisores++;
     }
 }
+console.log("Há", divisores, "divisores de ", n, ".")
