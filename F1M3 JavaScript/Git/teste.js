@@ -1,17 +1,19 @@
 const prompt = require('prompt-sync')();
 
-var n = parseInt(prompt("Digite um número inteiro: "));
-var divisores = 0
+do {
+    var cont = 0;
+    var n = parseInt(prompt("Digite um número inteiro positivo: "));
+    console.log("Os números primos que exitem entre 1 e", n, " são: ");
 
-for (let i = 1; i <= n - 1; i++) {
-    divisores = 0;
-    for (let j = 1; j <= i; j++) {
-
-        if (i % j == 0) {
-            divisores++;
+    for (let i = 1; i < n - 1; i++) {
+        cont = 0
+        for (let j = 1; j <= i; j++) {
+            if (i % j == 0) {
+                cont++
+            }
+        }
+        if (cont == 2) {
+            console.log(i)
         }
     }
-    if (divisores == 2) {
-        console.log(i);
-    }
-}
+} while (n >= 0);
