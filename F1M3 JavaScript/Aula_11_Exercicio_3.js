@@ -4,22 +4,17 @@ var array1 = [];
 var array2 = [];
 var array3 = [];
 
-for (i = 0; i <= 4; i++) {
-    array1.push(parseFloat(prompt("Digite um número: ")));
+console.log("Array 1");
+for (var i = 0; i <= 3; i++) {
+	array1.push(parseInt(prompt("Digite um número (0 a 9): ")));
 }
 
-console.log("Os dados inseridos foram: ", array1);
-
-for (i = 0; i <= 4; i++) {
-    array2.push(parseFloat(prompt("Digite um número: ")))
+for (var i = 0; i <= 3; i++) {
+	array2.push(parseInt(prompt("Digite um número (0 a 9): ")));
 }
-console.log("Os dados inseridos foram: ", array2);
 
-for (i = 0; i <= 4; i++) {
-    for (j = 0; j <= 4; j++) {
-        if (array1[i] == array2[j]) {
-            array3.push(array1[i]);
-        }
-    }
+for (var i = 0; i <= 3; i++) {
+	array3.push(array1[i] + array2[i])
 }
-console.log("A interseção entre os dados inseridos são: ", array3);
+
+console.log(array3);
