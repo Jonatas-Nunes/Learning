@@ -64,5 +64,23 @@ Caso a renda para cada membro da família seja maior ou igual a que R$ 500,00 o 
 * salário bruto (a partir de 2826,66): 15%
 Ao final, mostre ana trela o valor do salário líquido.
 
-Versão 19 - Comandos de Repetição aninhados.
+Versão 10 - Comandos de Repetição aninhados.
 
+// -------------------------------------------------------------------------
+
+Problema 4.1
+
+Elabore um algoritmo para calcular o salário líquido de 5 pessoas. Solicite ao usuário que digite seu nome e o valor de seu salário bruto. Para cada um dos dependentes deve ser solicitado o ganho mensal. Este valor deverá ser adicionado ao salário bruto.
+Calcule a renda familiar per capta.
+Caso a renda para cada membro da família seja menor que R$ 500,00 a pessoa ficará isenta de imposto de renda, ou sejam não será calculado dentre as faixas salariais e seu valor será zero.
+Caso a renda para cada membro da família seja maior ou igual a R$ 500,00 o imposto de renda a ser decontado do salário bruto deve considerar as seguintes regras:
+* salário bruto (de 0,00 até 1903,98): 5%
+* sakário bruto (de 1903,98 até 2826,65): 7,5%
+* salário bruto (a partir de 2826,66): 15%
+Ao final, mostre na tela o valor do salário líquido.
+
+Armazene os os salários líquidos em uma coleção indexada (array).
+
+Depois, calcule a média de todos os salários líquidos. Posteriormente, mostre a média dos salarios líquidos e quantas pessoas estão abaixo desse valor médio.
+
+Versão 11 - Coleções (Arrays)
