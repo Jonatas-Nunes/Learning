@@ -1,11 +1,5 @@
-var elementos = document.getElementsByTagName("*");
-document.write("Quantidade de elementos: " +  elementos.length);
+var b2 = document.getElementById("btn2");
+b2.onclick = function() {alert('Propriedades do manipulador de eventos'); };
 
-var todosElementos = "";
-
-for (i = 0; i < elementos.length; i++) {
-    const elemento = elementos[i];
-    todosElementos += "<br>" + elemento.tagName;    
-}
-
-document.write(todosElementos);
+var b3 = document.getElementById("btn3");
+b3.addEventListener("click", function() { alert("addEventListener"); }, false);
