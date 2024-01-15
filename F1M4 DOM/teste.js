@@ -1,21 +1,17 @@
-const btn = document.querySelector('button');
-btn.addEventListener('click', adicionar);
+let btn1 = document.querySelector('#btn1');
 
-const container = document.querySelector('#container');
-container.addEventListener('click', trocarCor);
+btn1.addEventListener('click', mensagem1);
+btn1.addEventListener('click', mensagem2);
+btn1.addEventListener('click', mensagem3);
 
-function random(number) {
-    return Math.floor(Math.random() * (number + 1));
-  }
+function mensagem1(e) {
+    alert("Mensagem 1: " + e.target.id);
+}
 
-  function trocarCor(e) {
-    var rndCor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`; // var rndCor = 'rgb(' + random(255) +  ',' + random(255) + ',' + random(255) + ')';
-    e.target.style.backgroundColor = rndCor;
- }
+function mensagem2() {
+    alert("Mensagem 2: " + btn1.innerText);
+}
 
- function adicionar () {
-    var div = document.createElement("div");
-    div.className = "quadrado";
-    div.style.backgroundColor = "rgb(100, 100, 100)";
-    container.appendChild(div);
- }
+function mensagem3() { 
+    alert("Mensagem 3: " + btn1.type);
+}
