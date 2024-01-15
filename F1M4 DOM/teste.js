@@ -1,5 +1,9 @@
-var container = document.querySelector('#container');
+const btn = document.querySelector('button');
+btn.addEventListener('click', adicionar);
+
+const container = document.querySelector('#container');
 container.addEventListener('click', trocarCor);
+
 function random(number) {
     return Math.floor(Math.random() * (number + 1));
   }
@@ -7,4 +11,11 @@ function random(number) {
   function trocarCor(e) {
     var rndCor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`; // var rndCor = 'rgb(' + random(255) +  ',' + random(255) + ',' + random(255) + ')';
     e.target.style.backgroundColor = rndCor;
+ }
+
+ function adicionar () {
+    var div = document.createElement("div");
+    div.className = "quadrado";
+    div.style.backgroundColor = "rgb(100, 100, 100)";
+    container.appendChild(div);
  }
