@@ -1,5 +1,9 @@
-var b2 = document.getElementById("btn2");
-b2.onclick = function() {alert('Propriedades do manipulador de eventos'); };
+function random(number) {
+    return Math.floor(Math.random() * (number + 1));
+  }
 
-var b3 = document.getElementById("btn3");
-b3.addEventListener("click", function() { alert("addEventListener"); }, false);
+  function trocarCor() {
+    var rndCor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    // var rndCor = 'rgb(' + random(255) +  ',' + random(255) + ',' + random(255) + ')';
+    document.body.style.backgroundColor = rndCor;
+ }
