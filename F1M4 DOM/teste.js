@@ -1,11 +1,10 @@
-var btn = document.querySelector('button');
-btn.addEventListener('click', trocarCor);
-
+var container = document.querySelector('#container');
+container.addEventListener('click', trocarCor);
 function random(number) {
     return Math.floor(Math.random() * (number + 1));
   }
 
-  function trocarCor() {
+  function trocarCor(e) {
     var rndCor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`; // var rndCor = 'rgb(' + random(255) +  ',' + random(255) + ',' + random(255) + ')';
-    document.body.style.backgroundColor = rndCor;
+    e.target.style.backgroundColor = rndCor;
  }
