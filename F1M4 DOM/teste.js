@@ -1,31 +1,17 @@
-a1 = document.getElementById('area1');
-a1.addEventListener('mousedown', mDown);
-a1.addEventListener('mouseup', mUp);
-a1.classList.add('unselectable');
+var btn = document.getElementById('btnCalcular');
+var alturaInput = document.getElementById('txtAltura');
+var pesoInput = document.getElementById('txtPeso');
+var valor_imc = document.getElementById('divIMC');
+btn.addEventListener('click', calcular_imc);
 
-a2 = document.getElementById('area2');
-a2.addEventListener('mouseover', mOver);
-a2.addEventListener('mouseout', mOut);
-a2.classList.add('unselectable');
-
-function mDown() {
-    let obj = document.getElementById('area1');
-    obj.style.backgroundColor = "#1ec5e5";
-    obj.innerHTML = "Solte-me!";
-}
-
-function mUp() {
-    let obj = document.getElementById('area1');
-    obj.style.backgroundColor = "#f04028";
-    obj.innerHTML = "Clique em mim!";
-}
-
-function mOver() {
-    let obj = document.getElementById('area2');
-    obj.innerHTML = "Obrigado";
-}
-
-function mOut() {
-    let obj = document.getElementById('area2');
-    obj.innerHTML = "Passe o Mouse!"
+function calcular_imc() {
+    var altura = parseFloat(alturaInput.value);
+    var peso = parseFloat(pesoInput.value);
+    
+    if (!isNaN(altura) && !isNaN(peso) && altura > 0 && peso > 0) {
+        let calc =  peso / ( altura * altura )
+        valor_imc.innerHTML = `O IMC é: ${calc.toFixed(2)}`
+    } else {
+        valor_imc.innerHTML = 'Por favor, insira um valor válido para a altura e peso.';
+    }
 }
