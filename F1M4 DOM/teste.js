@@ -1,17 +1,14 @@
-var btn = document.getElementById('btnCalcular');
-var alturaInput = document.getElementById('txtAltura');
-var pesoInput = document.getElementById('txtPeso');
-var valor_imc = document.getElementById('divIMC');
-btn.addEventListener('click', calcular_imc);
+var adicionar = document.getElementById('btnAdicionar');
+var tabela = document.getElementById('tabela1');
 
-function calcular_imc() {
-    var altura = parseFloat(alturaInput.value);
-    var peso = parseFloat(pesoInput.value);
-    
-    if (!isNaN(altura) && !isNaN(peso) && altura > 0 && peso > 0) {
-        let calc =  peso / ( altura * altura )
-        valor_imc.innerHTML = `O IMC é: ${calc.toFixed(2)}`
-    } else {
-        valor_imc.innerHTML = 'Por favor, insira um valor válido para a altura e peso.';
-    }
+adicionar.addEventListener('click', adicionar_num);
+
+function adicionar_num() {
+    let number = parseFloat(Math.floor(Math.random() * 100 + 1));
+    let td = document.createElement('td');
+    let tr = document.createElement('tr');
+    tr.setAttribute('id', 'doc');
+    tabela.appendChild(tr);
+    tr.appendChild(td)
+    td.innerText = number;
 }
