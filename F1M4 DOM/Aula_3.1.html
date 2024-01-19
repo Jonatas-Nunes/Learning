@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript - DOM </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>JavaScript - DOM - Formulários: Validação com HTML </title>
+    <link rel="stylesheet" href="Aula_3.1.css">
 </head>
 <body>
     
+    <h1>Validação com HTML</h1>
+    <hr>
+    <form name="form1" action="#" method="get">
+        <label for="txtNome">Nome</label>
+        <input type="text" name="nome" id="txtNome" placeholder="Fulano de Tal" required>
+        <label for="txtEmail">E-mail</label>
+        <input type="email" id="txtEmail" name="email" placeholder="fulano@email.com" required>
+        <label for="txtTelefone">Telefone</label>
+        <input type="text" name="telefone" id="txtTelefone" placeholder="(99)99999-9999" pattern="\(\d{2}\)\d{5}-\d{4}" required>
+        <label for="selSexo">Sexo</label>
+        <select name="sexo" id="selSexo" required>
+            <option value="" selected>Selecione o Sexo</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+        </select>
+        <label for="txtSenha">Senha</label>
+        <input type="password" id="txtSenha" name="senha" required>
+        <label for="txtConfSenha">Confirmação de Senha</label>
+        <input type="password" name="confSenha" id="txtConfSenha" required>
+        <input type="submit" class="btn" value="Enviar">
+    </form>
+
+    <script src="Aula_3.1.js"></script>
+
 </body>
 </html>
