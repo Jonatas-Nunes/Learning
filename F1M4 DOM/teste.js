@@ -1,14 +1,18 @@
-var adicionar = document.getElementById('btnAdicionar');
-var tabela = document.getElementById('tabela1');
+const contato1 = [{ "nome": "Rafael", "telefone": "(11)11111-1111" }];
+const contato2 = [{ "nome": "João", "telefone": "(22)22222-2222" }];
 
-adicionar.addEventListener('click', adicionar_num);
+var mostrarContato = document.getElementById('mostrarcontato');
+var container = document.getElementById('container');
 
-function adicionar_num() {
-    let number = parseFloat(Math.floor(Math.random() * 100 + 1));
-    let td = document.createElement('td');
-    let tr = document.createElement('tr');
-    tr.setAttribute('id', 'doc');
-    tabela.appendChild(tr);
-    tr.appendChild(td)
-    td.innerText = number;
+mostrarContato.addEventListener('click', mostrar_contato);
+
+function mostrar_contato() {
+    for (let contato of [contato1[0], contato2[0]]) {
+        let p1 = document.createElement('p');
+        let p2 = document.createElement('p');
+        p1.innerHTML = 'Nome: ' + contato.nome;
+        p2.innerHTML = `Tel: ${contato.telefone}`;
+        container.appendChild(p1);
+        container.appendChild(p2);
+    }
 }
