@@ -1,0 +1,123 @@
+<!-- Adaptação do arquivo index.html (5 pontos) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>JavaScript - DOM - Prática da Semana 03</title>
+</head>
+
+<body class="p-3 m-0 border-0">
+
+  <h1 class="text-center">Sistema de Cadastro de Monitores</h1>
+  <hr>
+
+  <form name="form1" action="#" method="POST" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome" required>
+      <div class="invalid-feedback">Informe o nome corretamente.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="marca" class="form-label">Marca</label>
+      <select id="marca" class="form-select" required>
+        <option value="" disabled selected>Selecione a Marca</option>
+        <option value="Samsung">Samsung</option>
+        <option value="LG">LG</option>
+        <option value="Zinnia">Zinnia</option>
+        <option value="Acer">Acer</option>
+        <option value="Asus">Asus</option>
+        <option value="Dell">Dell</option>
+        <option value="MSI">MSI</option>
+        <option value="Redragon">Redragon</option>
+      </select>
+      <div id="" class="invalid-feedback">Selecione a marca do monitor....</div>
+    </div>
+    <div class="col-md-6">
+      <label for="taxaAtualizacao" class="form-label">Taxa de Atualização</label>
+      <select id="taxaAtualizacao" class="form-select" required>
+        <option value="" disabled selected>Selecione a taxa de atualização</option>
+        <option value="60hz">60 Hertz</option>
+        <option value="75hz">75 Hertz</option>
+        <option value="100hz">100 Hertz</option>
+        <option value="144hz">144 Hertz</option>
+        <option value="165hz">165 Hertz</option>
+        <option value="240hz">240 Hertz</option>
+        <option value="280hz">280 Hertz</option>
+      </select>
+      <div id="feedbackCelular" class="invalid-feedback">Selecione a taxa de atualização...</div>
+    </div>
+    <div class="col-md-6">
+      <label for="pol" class="form-label">Polegadas (Inches)</label>
+      <select id="pol" class="form-select" required>
+        <option value="" disabled selected>Selecione a quantidade de polegadas...</option>
+        <option value="19">19'</option>
+        <option value="21">21'</option>
+        <option value="24">24'</option>
+        <option value="25">25'</option>
+        <option value="27">27'</option>
+        <option value="29">29'</option>
+        <option value="32">32'</option>
+        <option value="34">34'</option>
+        <option value="49">49'</option>
+      </select>
+      <div class="invalid-feedback">Informe a quantidade de polegadas...</div>
+    </div>
+    <div class="col-md-6">
+      <label for="proporcao" class="form-label">Proporção</label>
+      <select id="proporcao" class="form-select" required>
+        <option value="" disabled selected>Selecione a proporção da tela</option>
+        <option value="16:9">16:9</option>
+        <option value="21:9">21:9</option>
+        <option value="32:9">32:9</option>
+      </select>
+      <div class="invalid-feedback">Informea a proporção da tela...</div>
+    </div>
+    <div class="col-md-6">
+      <label for="resolution" class="form-label">Resolução</label>
+      <select id="resolution" class="form-select" required>
+        <option value="" disabled selected>Selecione a resolução da tela</option>
+        <option value="1280x720">1280x720</option>
+        <option value="1280x768">1280x768</option>
+        <option value="1440x900">1440x900</option>
+        <option value="1920x1080">1920x1080</option>
+        <option value="2560x1440">2560x1440</option>
+        <option value="3840x2160">3840x2160</option>
+        <option value="3840x1080">3840x1080</option>
+        <option value="2560x1080">2560x1080</option>
+        <option value="3440x1440">3440x1440</option>
+        <option value="5120x1440">5120x1440</option>
+      </select>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <input type="submit" class="btn btn-primary me-md-2" value="Inserir" id="btnInserir">
+    </div>
+  </form>
+
+  <hr>
+
+  <table class="table table-striped" id="tabela">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Taxa de Atualização</th>
+        <th scope="col">Polegadas (Inches)</th>
+        <th scope="col">Proporção</th>
+        <th scope="col">Resolução</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>
