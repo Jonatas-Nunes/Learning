@@ -21,11 +21,11 @@
 
 
 function getLocalStorage() {
-  return JSON.parse(localStorage.getItem('bd_clientes')) ?? [];
+  return JSON.parse(localStorage.getItem('bd_monitores')) ?? [];
 }
 
-function setLocalStorage(bd_clientes) {
-  localStorage.setItem('bd_clientes', JSON.stringify(bd_clientes));
+function setLocalStorage(bd_monitores) {
+  localStorage.setItem('bd_monitores', JSON.stringify(bd_monitores));
 }
 
 function limparTabela() {
@@ -37,16 +37,18 @@ function limparTabela() {
 
 function atualizarTabela() { // Adaptação da função atualizarTabela (5 pontos)
   limparTabela();
-  const bd_clientes = getLocalStorage();
+  const bd_monitores = getLocalStorage();
   let index = 0;
-  for (cliente of bd_clientes) {
+  for (monitor of bd_monitores) {
     const novaLinha = document.createElement('tr');
     novaLinha.innerHTML = `
         <th scope="row">${index}</th>
-        <td>${cliente.nome}</td>
-        <td>${cliente.email}</td>
-        <td>${cliente.celular}</td>
-        <td>${cliente.estado}</td>
+        <td>${monitor.nome}</td>
+        <td>${monitor.marca}</td>
+        <td>${monitor.taxaAtualizacao}
+        <td>${monitor.polegadas}</td>
+        <td>${monitor.proporcao}</td>
+        <td>${monitor.resolution}
         <td>
             <button type="button" class="btn btn-danger" id="${index}" onclick="excluir(${index})">Excluir</button>
         </td>
@@ -57,35 +59,55 @@ function atualizarTabela() { // Adaptação da função atualizarTabela (5 ponto
 }
 
 function inserir() { // Adaptação da função inserir (10 pontos)
-  const cliente = {
+  const monitor = {
     nome: document.getElementById('nome').value,
-    email: document.getElementById('email').value,
-    celular: document.getElementById('celular').value,
-    estado: document.getElementById('estado').value
+    marca: document.getElementById('marca').value,
+    taxaAtualizacao: document.getElementById('taxaAtualizacao').value,
+    polegadas: document.getElementById('polegadas').value,
+    proporcao: document.getElementById('proporcao').value,
+    resolution: document.getElementById('resolution').value
   }
-  const bd_clientes = getLocalStorage();
-  bd_clientes.push(cliente);
-  setLocalStorage(bd_clientes);
+  const bd_monitores = getLocalStorage();
+  bd_monitores.push(monitor);
+  setLocalStorage(bd_monitores);
   atualizarTabela();
 }
 
 function excluir(index) { // Adaptação da função excluir (5 pontos)
-  const bd_clientes = getLocalStorage();
-  bd_clientes.splice(index, 1);
-  setLocalStorage(bd_clientes);
+  const bd_monitores = getLocalStorage();
+  bd_monitores.splice(index, 1);
+  setLocalStorage(bd_monitores);
   atualizarTabela();
 }
 
-function validarCelular() { // Adaptação da função validar (10 pontos)
-  const bd_clientes = getLocalStorage();
-  for (cliente of bd_clientes) {
-    if (celular.value == cliente.celular) {
+function validarMonitor() { // Adaptação da função validar (10 pontos)
+  const bd_monitores = getLocalStorage();
+  for (monitor of bd_monitores) {
+    if (nome.value == monitor.nome && marca.value == monitor.marca && polegadas.value == monitor.polegadas && proporcao.value == monitor.proporcao && resolution.value == monitor.resolution) {
+      nome.setCustomValidity('Esse monitor já existe no cadastro. Informe um novo.');
+      feedback.innerText = 'Esse monitor já existe no cadastro. Informe um novo';
+      marca.setCustomValidity('Esse monitor já existe no cadastro. Informe um novo.');
+      feedbackMarca.innerText = 'Esse monitor já existe no cadastro. Informe um novo.';
+      polegadas.setCustomValidity('Esse monitor já existe no cadastro. Informe um novo.');
+      feedbackPolegadas.innerText = 'Esse monitor já existe no cadastro. Informe um novo.';
+      proporcao.setAttribute('Esse monitor já existe no cadastro. Informe um novo.');
+      feedbackProporcao.innerText = 'Esse monitor já existe no cadastro. Informe um novo.';
+      resolution.setCustomValidity('Esse monitor já existe no cadastro. Informe um novo.');
+      feedbackResolution.innerText = 'Esse monitor já existe no cadastro. Informe um novo.';
       celular.setCustomValidity("Este número de celular já existe!");
       feedbackCelular.innerText = "Este número de celular já existe!";
       return false;
     } else {
-      celular.setCustomValidity("");
-      feedbackCelular.innerText = "Informe o celular corretamente.";
+      nome.setCustomValidity('');
+      feedback.innerText = 'Informe o nome do monitor.';
+      marca.setCustomValidity('');
+      feedbackMarca.innerText = 'Selecione a marca do monitor...';
+      polegadas.setCustomValidity('');
+      feedbackPolegadas.innerText = 'Selecione a quantidade de polegadas...';
+      proporcao.setAttribute('');
+      feedbackProporcao.innerText = 'Informe a proporção da tela...';
+      resolution.setCustomValidity('');
+      feedbackResolution.innerText = 'Informe a resolução da tela...';
     }
   }
   return true;
@@ -93,6 +115,21 @@ function validarCelular() { // Adaptação da função validar (10 pontos)
 
 atualizarTabela();
 // Seleção dos elementos e adição do listener para validação customizada (5 pontos)
-const celular = document.getElementById("celular");
-const feedbackCelular = document.getElementById("feedbackCelular");
-celular.addEventListener('input', validarCelular);
+const nome = document.getElementById('nome');
+const feedbackNome = document.getElementById('feedbackNome');
+nome.addEventListener('input', validarMonitor);
+
+const marca = document.getElementById('marca');
+const feedbackMarca = document.getElementById('feedbackMarca');
+
+const taxaAtualizacao = document.getElementById('taxaAtualizacao');
+const feedbackTaxaAtt = document.getElementById('feedbackTaxaAtt');
+
+const polegadas = document.getElementById('polegadas');
+const feedbackPolegadas = document.getElementById('feedbakcPolegadas');
+
+const proporcao = document.getElementById('proporcao');
+const feedbackProporcao = document.getElementById('feedbackproporcao');
+
+const resolution = document.getElementById('resolution');
+const feedbackResolution = document.getElementById('feedbackResolution');
