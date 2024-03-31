@@ -1,0 +1,14 @@
+{
+  "name": "tarefa_semana_1",
+  "version": "1.0.0",
+  "description": "Tarefa da Semana 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jônatas Nunes",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "projeto-npm",
+  "version": "1.0.0",
+  "description": "Exercício Prático: Criando um projeto node.js com o npm",
+  "main": "Aula 5.3_Exercício",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jônatas Nunes",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
