@@ -1,5 +1,5 @@
 // importando o módulo de conversor de temperatura
-const converter = require('../Aula 5.1.js');
+const converter = require('./Aula 5.1.js');
 
 var tempF = 77;
 
