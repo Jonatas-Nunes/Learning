@@ -9,6 +9,9 @@
   "author": "Jônatas Nunes",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "date-fns": "^3.6.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.3.2",
+    "prompt-sync": "^4.2.0"
   }
 }

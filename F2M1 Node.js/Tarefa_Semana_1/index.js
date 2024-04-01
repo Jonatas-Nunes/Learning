@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')();
-const customModule = require('./module.js')
+const customModule = require('./module.js');
 
 let request;
 
