@@ -1,0 +1,36 @@
+{
+    "filmes": [
+        {
+            "titulo": "Interstelar",
+            "diretor": "Chritopher Nolan",
+            "ano_lançamento": 2014,
+            "genero": "Ficção Científica",
+            "atores": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+            "sinopse": "Um grupo de astronautas viaja através de uma buraco de minhoca em busca de um novo lar para a humanidade enquanto enfrenta desafios cósmicos."
+        },
+        {
+            "titulo": "Pantera Negra",
+            "diretor": "Ryan Coogler",
+            "ano_lançamento": 2018,
+            "genero": "Ação",
+            "atores": ["Chadwick Boseman", "Michael B. Jordan", "Lupita Nyong'o"],
+            "sinopse":  "T'Challa retorna a Wakanda para assumir o trono após a morte de seu pai, o rei e enfrenta desafios internos e externos para proteger seu povo e seu reino. "
+        },
+        {
+            "titulo": "A Origem", 
+             "diretor": "Chritopher Nolan",
+             "ano_lançamento": 2010,
+             "genero":"Ficção Científica",
+             "atores": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+             "sinopse": "Dominic Cobb é um ladrão de informações que invade os sonhos das pessoas para roubar segredos. Ele recebe a chance de redenção ao ser contratado para realizar a tarefa inversa: implantar uma ideia."
+        },
+        {
+            "titulo": "Jurassic Park",
+            "diretor": "Steven Spilberg",
+            "ano_lançamento": 1993,
+            "genero": "Ação",
+            "atores": ["Laura Dern", "Jedd Goldblum", "Sam Neill", "Richard Atlenborough"],
+            "sinopse": "Os paleontólogos Alan Grant, Ellie Sattler e o matemático Ian Malcolm fazem parte de um seleto grupo escolhido para visitar uma ilha habitada por dinossauros criados a partir de DNA pré-histórico."
+        }
+    ]
+}
