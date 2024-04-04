@@ -20,4 +20,4 @@ function callbackConcluirDownload (erro, nomeConteudo) {
 // Agora, vamos usar a função baixarConteúdo com callbacks
 baixarConteudo('Documento.pdf', callbackConcluirDownload);
 baixarConteudo('Imagen.png', callbackConcluirDownload);
-baixarConteudo('Video.mp4', callbackConcluirDownload);
+baixarConteudo('Video.mp4', callbackConcluirDownload)
