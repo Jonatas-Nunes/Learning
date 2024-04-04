@@ -2,7 +2,7 @@ const prompt = require('prompt-sync')();
 
 var data = prompt('Entre com a data: ');
 
-var [dia, mes, ano] = //USE O MÉTODO SPLIT PARA OBTER OS DADOS DA DATA SEPARADAMENTE
+var [dia, mes, ano] = data.split('/'); //USE O MÉTODO SPLIT PARA OBTER OS DADOS DA DATA SEPARADAMENTE
 
 switch(mes){
   case '01': 
