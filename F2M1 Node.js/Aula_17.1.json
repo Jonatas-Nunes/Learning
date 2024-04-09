@@ -1,8 +1,8 @@
 {
   "estados": [
     {
-      "nome": "Espírito Santo",
-      "id": "ES"
+      "id": "ES",
+      "nome": "Espírito Santo"
     },
     {
       "id": "RJ",
@@ -11,6 +11,10 @@
     {
       "id": "MG",
       "nome": "Minas Gerais"
+    },
+    {
+      "id": "BA",
+      "nome": "Bahia"
     },
     {
       "id": "SP",
