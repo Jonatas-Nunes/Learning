@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de Arquivos</title>
+  <style>
+    body {
+      background-color: lightblue;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Envio de Arquivos</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="arquivo" multiple><br>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>

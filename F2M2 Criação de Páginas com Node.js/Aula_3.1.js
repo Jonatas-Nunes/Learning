@@ -3,7 +3,7 @@ const fs = require('fs');
 const porta = 443;
 
 const servidor = http.createServer((req, res) => {
-    fs.readFile('Aula_3.1.html', (err,arquivo) =>{
+    fs.readFile('Aula_3.1.html', (err, arquivo) =>{
         res.writeHead(200, {'Content-type':'text/html'});
         res.write(arquivo);
         res.end;
