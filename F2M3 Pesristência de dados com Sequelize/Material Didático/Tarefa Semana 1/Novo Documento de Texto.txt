@@ -1,0 +1,81 @@
+Pensei em fazer utilizando a importação do módulo `sqlite3` assim como foi feito na **Aula 3 :: Introdução** para fazer a tabela e ir colocando um as informações dos alunos. Porém, há um problema que, para inserir todos os dados, foi ensinado a criar a tabela com o comando `db.run("CREATE TABLE setor(idsetor int, nome varchar(40), ramal varchar(4), e_mail varchar(30))");`, depois comentar/apagar o código acima mencionado, para depois executar o mesmo arquivo com o código `db.run("INSERT into setor(idsetor,nome,ramal,e_mail) values(1,'FINANCEIRO','4254','FINANCEIRO@EMPRESA.COM')");`. Esse código, além de inserir os dados, já acessa a tabela do arquivo o que dá a entender que para inserir não é necessário passar pelo código de criar tabela de novo. Então é necessário uma tomada de decisão verificando se o arquivo escola.sqlite já existe. Para verificar se um arquivo já existe em uma pasta usando JavaScript, você pode usar o módulo **`fs`** (File System) do Node.js. Aqui está um exemplo de como você pode fazer isso:
+
+```jsx
+const fs = require('fs');
+
+const nomeDoArquivo = 'arquivo.txt';
+
+// Verifica se o arquivo existe na pasta atual
+fs.access(nomeDoArquivo, fs.constants.F_OK, (err) => {
+  if (err) {
+    console.error(`O arquivo ${nomeDoArquivo} não existe.`);
+    return;
+  }
+
+  console.log(`O arquivo ${nomeDoArquivo} existe.`);
+});
+```
+
+```jsx
+while (i <= 1000) {
+    i++;
+
+    if (i % 7 == 3) {
+        console.log(i)
+    }
+}
+```
+
+```jsx
+const fs = require('fs');
+
+const nomeDoArquivo = 'arquivo.txt';
+
+// Verifica se o arquivo existe na pasta atual
+fs.access(nomeDoArquivo, fs.constants.F_OK, (err) => {
+  if (err) {
+    console.error(`O arquivo ${nomeDoArquivo} não existe.`);
+    return;
+  }
+
+  console.log(`O arquivo ${nomeDoArquivo} existe.`);
+});
+```
+
+```jsx
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('empresa.sqlite', (err) => {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log('Conectado ao banco de dados da Empresa com sucesso!');
+    // db.run("CREATE TABLE setor(idsetor int, nome varchar(40), ramal varchar(4), e_mail varchar(30))");
+    // db.run("CREATE TABLE funcionarios(matricula int primary key, id_setor int null, nome varchar(40), nascimento date, telefone varchar(15))");
+});
+
+// db.run("INSERT into setor(idsetor,nome,ramal,e_mail) values(1,'FINANCEIRO','4254','FINANCEIRO@EMPRESA.COM')");
+// db.run("INSERT into setor(idsetor,nome,ramal,e_mail) values(2,'PORTARIA','4253','PORTARIA@EMPRESA.COM')");
+// db.run("INSERT into setor(idsetor,nome,ramal,e_mail) values(3,'SECRETARIA','4237','SECRETARIA@EMPRESA.COM')");
+```
+
+API
+
+```jsx
+const { name } = require('ejs');
+const sqlite3 = require('sqlite3');
+
+function createTable(nameTable, collum1, collum2, collum3, collum4) {
+    db.run(`CREATE TABLE ${nameTable}(${collum1}, ${collum2}, ${collum3}, ${collum4})`);
+}
+
+function insertTable(nameTable, collum1,collum2,collum3,collum4) {
+    db.run(`INSERT INTO ${nameTable}(${collum1},'${collum2}','${collum3}','${collum4}')`);
+}
+
+module.exports = {
+    createTable,
+    insertTable
+}
+```
+
+INDEX
