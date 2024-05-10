@@ -1,6 +1,7 @@
 //Importando bibliotecas e arquivos
 const database = require('./db');
 const Cliente = require('./models/cliente');
+const Fornecedor = require('./models/fornecedor');
 
 // Criando o servidor
 const express = require('express');
@@ -21,7 +22,7 @@ app.get('/', (req, res) => {
 });
 app.get('/cadcliente', (req, res) => {
   res.render('formCliente');
-})
+});
 app.post('/addcliente', (req, res) => {
   Cliente.create({
     nome: req.body.nome,
@@ -32,6 +33,21 @@ app.post('/addcliente', (req, res) => {
     res.send('<h1>Cliente cadastrado com sucesso!</h1>');
   });
 });
+
+// 8. No arquivo index.js, crie a rota POST para a operação create (criar) registros na tabela fornecedor.
+app.get('/cadfornecedor', (req, res) => {
+  res.render('formFornecedor');
+});
+app.post('/addfornecedor', (req, res) => {
+  Fornecedor.create({
+    nome: req.body.nome,
+    telefone: req.body.telefone,
+    email: req.body.email
+  }).then(() => {
+    res.send('<h1>Fornecedor cadastrado com sucesso!</h1>');
+  });
+});
+
 app.listen(porta, () => {
   console.log(`Servidor rodando na porta ${porta}`);
   const url = `http://localhost:${porta}`;
@@ -45,6 +61,8 @@ app.listen(porta, () => {
     console.log(resultado);
     const clientes = await Cliente.findAll();
     console.log('Lista de Clientes \n', clientes);
+    const fornecedores =  await Fornecedor.findAll();
+    console.log('Lista de Fornecedores \n', fornecedores);
   } catch (error) {
     console.log(error);
   }
