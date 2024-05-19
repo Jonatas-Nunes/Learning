@@ -11,15 +11,40 @@ let user1 = {
     cidade: 'Anchieta'
 }
 
+let user2 = {
+    nome: 'Hugo',
+    apelido: 'UgaUga',
+    idade: '23',
+    cidade: 'Piuma'
+}
+
+let user3 = {
+    nome: 'Felipe',
+    apelido: 'Talarico',
+    idade: '26',
+    cidade: 'São Paulo'
+}
+
 app.get('/adicionar/usuario', (req, res) => {
-    res.cookie('usuarioDados', user1, user2, user3, { expire: 400000 + Date.now() });
+    res.cookie('usuario1', user1, { expire: 400000 + Date.now() });
+    res.cookie('usuario2', user2, { expire: 400000 + Date.now() });
+    res.cookie('usuario2', user3, { expire: 400000 + Date.now() });
+
     res.send('Dados dos usuários adicionados com sucesso');
 }); 
 
 app.get('/usuario', (req, res) => {
-    res.send(req.cookies.usuarioDados.nome);
+    res.send(req.cookies);
 });
-
+app.get('usuario/user1', (req, res) => {
+    res.send(req.cookies.usuario1);
+});
+app.get('usuario/user2', (req, res) => {
+    res.send(req.cookies.usuario2);
+});
+app.get('usuario/user3', (req, res) => {
+    res.send(req.cookies.usuario3);
+});
 app.get('/', (req, res) => {
     res.send('Seja bem Vindo ao teste de cookies.');
 });
