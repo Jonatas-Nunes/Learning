@@ -1,4 +1,4 @@
-const Tarefa = require('../model/tafefaModel');
+const Tarefa = require('../model/tarefaModel');
 
 module.exports = class tarefaController {
 
