@@ -4,6 +4,7 @@ const router = express.Router();
 
 // CONTROLLERS
 const usuarioController = require("../controller/usuarioController");
+const produtoController = require('../controller/produtoController');
 
 // Requisições HTTP Principal
 router.get("/", (req, res) => {
@@ -24,5 +25,14 @@ router.put("/usuarios/:id", usuarioController.UsuarioUpdate);
 router.delete("/usuarios/:id", usuarioController.UsuarioDelete);
 
 router.post("/login", usuarioController.UsuarioVerificaLogin);
+
+// Requisições Produto
+
+// POST - CADASTRAR
+router.post("/add_produtos", produtoController.produtoCreate);
+
+// GET - LISTAR
+router.get("/produtos/:id?", produtoController.ProdutoListar);
+
 
 module.exports = router;

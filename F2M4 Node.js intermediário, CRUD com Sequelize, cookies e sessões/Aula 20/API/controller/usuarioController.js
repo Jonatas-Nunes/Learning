@@ -42,7 +42,7 @@ module.exports = class usuarioController {
             senha: senha
         };
         await Usuario.update(usuario, { where: { id_usuario: id_usuario } });
-        res.json({message: "Cadastro atualizado com sucesso! Foram atualizados as sequintes informações: ", dados: usuario});
+        res.json({ message: "Cadastro atualizado com sucesso! Foram atualizados as sequintes informações: ", dados: usuario });
     }
 
     //Função UsuarioDelete responsável pela exclusão do usuário.
@@ -59,30 +59,28 @@ module.exports = class usuarioController {
             email: email,
             senha: senha
         }
-        const Usuario = await Usuario.findOne({ where: { email: email, senha: senha } }).then((usuario) => {
+        const usuario = await Usuario.findOne({ where: { email: email, senha: senha } }).then((usuario) => {
             if (usuario != undefined) {
                 const id = usuario.id_usuario;
-                const token = jwt.sign({ id }, process.env.SECRET, {
-                    expireIn: 300 // expira em 5 minutos
-                });
-                return res.json({ auth: true, token: token }); // Criação do token
+                const token = jwt.sign({ id }, process.env.SECRET, { expiresIn: 300 });
+                return res.json({ auth: true, token: token }); //Criação do token
             } else {
-                res.status(402).json( {message: 'Erro ao logar no sistema'});
+                res.status(402).json({ message: "Erro ao logar no sistema." });
             }
         });
     }
-    
+
     // Verifica se o token foi criado
     static async verificaJWT(req, res, next) {
         const token = req.headers['x-access-token'];
-        if (!token) return res.status(401).json({ auth: false, message: 'Nenhum token criado.'})   ;
+        if (!token) return res.status(401).json({ auth: false, message: 'Nenhum token criado.' });
         jwt.verify(token, process.env.SECRET, (err, decoded) => {
-            if (err) return res.status(500).json({ auth: false, message: 'Falha na autenticação com o token.'});
-            
+            if (err) return res.status(500).json({ auth: false, message: 'Falha na autenticação com o token.' });
+
             // Salva no request para uso posterior
             req.userId = decoded.id;
             next();
-        });        
-        
+        });
+
     }
 }

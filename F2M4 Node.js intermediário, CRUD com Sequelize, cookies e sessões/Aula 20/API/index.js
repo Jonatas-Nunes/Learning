@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 //INSTALAÇÃO BIBLIOTECAS/MÓDULOS
 const express = require("express");
 const app = express();
