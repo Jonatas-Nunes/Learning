@@ -1,0 +1,26 @@
+<h1 class="text-center my-3">Sistema de Cadastro de Livros</h1>
+<form action="/livros/Cadastrar" method="post">
+    <div class="row w-50 d-block m-auto g-3">
+        <div class="col-12">
+            <label class="form-label" for="titulo">Título do Livro:</label>
+            <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Digite o título do livro." />
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="autor">Autor:</label>
+            <input class="form-control" type="text" name="autor" id="autor"
+                placeholder="Digite o nome do(s) autor(es)." />
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="preco">Preço do produto:</label>
+            <input class="form-control" type="text" name="preco" id="preco" placeholder="Digite o preço do Livro." />
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="link">Link da capa do Livro:</label>
+            <input class="form-control" type="text" name="link" id="link"
+                placeholder="Digite o link da imagem do produto." />
+        </div>
+        <div>
+            <input class="btn btn-primary my-3" type="submit" value="Cadastrar Produto" />
+        </div>
+    </div>
+</form>
